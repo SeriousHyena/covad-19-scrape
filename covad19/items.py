@@ -9,4 +9,4 @@ import scrapy
 
 
 class Covad19Item(scrapy.Item):
-    case_item = scrapy.Field()
+    foo = scrapy.Field()
