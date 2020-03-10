@@ -9,14 +9,20 @@ class CovadSpider(scrapy.Spider):
     start_urls = ['https://www.worldometers.info/coronavirus/']
 
     def parse(self, response):
+        items = Covad19Item()
         all_countries = response.css('td::text').extract()
         case_list = []
+        
 
         for item in all_countries:
-            case = item
-            case_list.append(case)
+            case_item = item
+            case_list.append(case_item)
+            
 
-        print(case_list)
+            items['case_item'] = case_item
+
+            yield items
+
 
 
             
