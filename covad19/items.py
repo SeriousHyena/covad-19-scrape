@@ -9,4 +9,5 @@ import scrapy
 
 
 class Covad19Item(scrapy.Item):
+    
     foo = scrapy.Field()

@@ -4,6 +4,7 @@
 import scrapy
 from ..items import Covad19Item
 
+
 class CovadSpider(scrapy.Spider):
     name = 'covad'
     start_urls = ['https://www.worldometers.info/coronavirus/']
@@ -11,7 +12,7 @@ class CovadSpider(scrapy.Spider):
     def parse(self, response):
         
         items = Covad19Item()
-        all_countries = response.css('td::text').extract()
+        all_countries = response.css('tbody > tr > td::text').extract()
         foo = []
         #counter = 0
 
@@ -30,6 +31,15 @@ class CovadSpider(scrapy.Spider):
             yield items
             foo.clear()
 
+
+
+
+
+
+          
+            
+            
+            
 
     
 
