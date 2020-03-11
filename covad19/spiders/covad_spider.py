@@ -3,6 +3,7 @@
 
 import scrapy
 from ..items import Covad19Item
+    
 
 
 class CovadSpider(scrapy.Spider):
@@ -18,18 +19,19 @@ class CovadSpider(scrapy.Spider):
 
         for item in all_countries[60:-8]:
 
-            case_item = item
+            case_item = item 
             foo.append(case_item)
-            if len(foo) == 8:
-
-               items['foo'] = foo
-            
-            
             
 
-        if len(foo) > 8:
-            yield items
-            foo.clear()
+            items['foo'] = foo
+            
+            
+            if len(foo) > 8:
+       
+                yield items
+                foo.clear()
+
+CovadSpider()
 
 
 
