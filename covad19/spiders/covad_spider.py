@@ -3,7 +3,7 @@
 
 import scrapy
 
-from .items import Covad19Item
+from ..items import Covad19Item
 
 class CovadSpider(scrapy.Spider):
     name = 'covad'
@@ -30,7 +30,7 @@ class CovadSpider(scrapy.Spider):
                 yield items
                 foo.clear()
 
-CovadSpider()
+#CovadSpider()
 
 
 
