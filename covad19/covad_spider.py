@@ -4,10 +4,6 @@
 import scrapy
 
 from .items import Covad19Item
-from .functions import pre_sort
-
-
-
 
 class CovadSpider(scrapy.Spider):
     name = 'covad'
