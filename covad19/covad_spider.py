@@ -2,7 +2,10 @@
 # https://github.com/SeriousHyena/covad-19-scrape/blob/master/covad19/spiders/covad_spider.py
 
 import scrapy
-from ..items import Covad19Item
+
+from .items import Covad19Item
+from .functions import pre_sort
+
 
 
 
