@@ -3,7 +3,7 @@
 
 import scrapy
 from ..items import Covad19Item
-    
+
 
 
 class CovadSpider(scrapy.Spider):
